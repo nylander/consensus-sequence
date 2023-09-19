@@ -1,6 +1,6 @@
 # Calculate consensus sequence from fasta or CSV
 
-- Last modified: tis sep 19, 2023  05:15
+- Last modified: tis sep 19, 2023  05:17
 - Sign: JN
 
 ## Description
@@ -72,7 +72,7 @@ Two scripts for calculating consensus or compromise (DNA) sequences from either 
 
 ### consensus-seq-from-csv.pl
 
-            FILE: consensus-from-csv.pl
+            FILE: consensus-seq-from-csv.pl
 
            USAGE: ./consensus-seq-from-csv.pl R84150_2009.duplicates.csv
                   ./consensus-seq-from-csv.pl -d  R84150_2009.duplicates.csv
