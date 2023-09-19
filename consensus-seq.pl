@@ -1,4 +1,4 @@
-#!/usr/bin/env perl 
+#!/usr/bin/env perl
 #===============================================================================
 
 =pod
@@ -6,9 +6,9 @@
 
 =head2
 
-         FILE: consensus.pl
+         FILE: consensus-seq.pl
 
-        USAGE: ./consensus.pl fasta-alignment-file
+        USAGE: ./consensus-seq.pl fasta-alignment-file
 
   DESCRIPTION: Calculate consensus sequence from fasta alignment.
                Can use a consensus level (1-100), or represent
@@ -57,10 +57,10 @@
          BUGS: ---
 
         NOTES: ---
-        
-       AUTHOR: Johan Nylander (JN), johan.nylander@nbis.se
 
-      COMPANY: NBIS/NRM
+       AUTHOR: Johan Nylander
+
+      COMPANY: NRM
 
       VERSION: 1.0
 

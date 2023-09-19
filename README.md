@@ -1,11 +1,84 @@
-## 
+# Calculate consensus sequence from fasta or CSV
 
-            FILE: do_consensus.pl
+- Last modified: tis sep 19, 2023  05:07
+- Sign: JN
 
-           USAGE: ./do_consensus.pl R84150_2009.duplicates.csv
-                  ./do_consensus.pl -d  R84150_2009.duplicates.csv
-                  ./do_consensus.pl -s ';' R84150_2009.duplicates.txt
-                  ./do_consensus.pl -s ';' -d  -nu dna.duplicates.txt
+## Description
+
+Two scripts for calculating consensus or compromise (DNA) sequences from either fasta or csv input format.
+
+### consensus-seq.pl
+
+            FILE: consensus-seq.pl
+
+           USAGE: ./consensus-seq.pl fasta-alignment-file
+
+     DESCRIPTION: Calculate consensus sequence from fasta alignment.
+                  Can use a consensus level (1-100), or represent
+                  a (strict) consensus using IUPAC symbols.
+
+                  Prints to STDOUT or, if --outfile is used, to
+                  an outfile.
+
+                  Fasta sequence is wrapped (interleaved) to
+                  with set by -w, (default 80), unless
+                  --nowrap is used.
+
+                  Default fasta header will be based on infile
+                  name, and will display some extra information.
+                  For example:
+
+                  >in.fas|consensus [conlevel=100 nseq=8 length=3844 identity=88.93]
+
+                  The header can be overridden by using -l.
+
+                  Regarding consensus level (taken from Bio::Align::AlignI):
+
+                  "The consensus residue has to appear at least threshold %
+                  of the sequences at a given location, otherwise a '?'
+                  character will be placed at that location."
+
+         OPTIONS: -i,--infile=<file>  Provide fasta formatted
+                                      sequence alignment
+                  -o,--oufile=<file>  Provide output file name
+                                      (will be fasta format)
+                  -c,--conlevel=<nr>  Provide consensus level (1-100).
+                                      Default '50'.
+                  -s,--strict         Synonym for -c=100. Overrides
+                                      -c.
+                  -l,--label=<string> Provide custom fasta header.
+                  -w,--wrap=<nr>      Set max line length in sequence
+                                      to <nr>. Default is 80.
+                  -n,--nowrap         Do not wrap (interleave)
+                                      sequence string.
+                  -I,--IUPAC          Represent all ambiguities as 
+                                      IUPAC symbols in the (strict)
+                                      consensus.
+
+    REQUIREMENTS: BioPerl, perldoc
+
+            BUGS: ---
+
+           NOTES: ---
+
+          AUTHOR: Johan Nylander
+
+         COMPANY: NRM
+
+         VERSION: 1.0
+
+         CREATED: 2019-09-25 09:42:04
+
+        REVISION: ---
+
+### consensus-seq-from-csv.pl
+
+            FILE: consensus-from-csv.pl
+
+           USAGE: ./consensus-seq-from-csv.pl R84150_2009.duplicates.csv
+                  ./consensus-seq-from-csv.pl -d  R84150_2009.duplicates.csv
+                  ./consensus-seq-from-csv.pl -s ';' R84150_2009.duplicates.txt
+                  ./consensus-seq-from-csv.pl -s ';' -d  -nu dna.duplicates.txt
 
      DESCRIPTION: Read csv file and print "conservative consensus".
                   That is, if there are polymorphism in a site, a question mark
@@ -31,7 +104,7 @@
            TODO:  * Support fasta input
                   * Support AA input
 
-          AUTHOR: Johan Nylander (JN), johan.nylander@nbis.se
+          AUTHOR: Johan Nylander
 
          COMPANY: NBIS/NRM
 
