@@ -17,9 +17,8 @@
                Prints to STDOUT or, if --outfile is used, to
                an outfile.
 
-               Fasta sequence is wrapped (interleaved) to
-               with set by -w, (default 80), unless
-               --nowrap is used.
+               Fasta sequence is wrapped to width set by -w,
+               (default 80), unless --nowrap is used.
 
                Default fasta header will be based on infile
                name, and will display some extra information.
