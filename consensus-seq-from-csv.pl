@@ -28,8 +28,6 @@
 
  REQUIREMENTS: ---
 
-         BUGS: ---
-
         NOTES: Uses the first part of the filename (<name>.duplicates.txt) as 
                output sequence name, unless given as arg.
 
@@ -38,13 +36,15 @@
 
        AUTHOR: Johan Nylander
 
-      COMPANY: NBIS/NRM
+      COMPANY: NRM
 
       VERSION: 1.0
 
       CREATED: 03/12/2019 11:02:49 AM
 
      REVISION: ---
+
+      LICENSE: MIT
 
 =cut
 
@@ -53,7 +53,6 @@
 
 use strict;
 use warnings;
-use Data::Dumper;
 use Getopt::Long;
 
 exec("perldoc", $0) unless (@ARGV);

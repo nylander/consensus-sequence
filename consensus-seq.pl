@@ -53,8 +53,6 @@
 
  REQUIREMENTS: BioPerl, perldoc
 
-         BUGS: ---
-
         NOTES: ---
 
        AUTHOR: Johan Nylander
@@ -66,6 +64,8 @@
       CREATED: 2019-09-25 09:42:04
 
      REVISION: ---
+
+      LICENSE: MIT
 
 =cut
 

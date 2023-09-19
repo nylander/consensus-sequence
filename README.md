@@ -1,11 +1,12 @@
 # Calculate consensus sequence from fasta or CSV
 
-- Last modified: tis sep 19, 2023  05:17
+- Last modified: tis sep 19, 2023  05:23
 - Sign: JN
 
 ## Description
 
 Two scripts for calculating consensus or compromise (DNA) sequences from either fasta or csv input format.
+
 
 ### consensus-seq.pl
 
@@ -56,8 +57,6 @@ Two scripts for calculating consensus or compromise (DNA) sequences from either 
 
     REQUIREMENTS: BioPerl, perldoc
 
-            BUGS: ---
-
            NOTES: ---
 
           AUTHOR: Johan Nylander
@@ -69,6 +68,8 @@ Two scripts for calculating consensus or compromise (DNA) sequences from either 
          CREATED: 2019-09-25 09:42:04
 
         REVISION: ---
+
+         LICENSE: MIT
 
 ### consensus-seq-from-csv.pl
 
@@ -95,8 +96,6 @@ Two scripts for calculating consensus or compromise (DNA) sequences from either 
 
     REQUIREMENTS: ---
 
-            BUGS: ---
-
            NOTES: Uses the first part of the filename (<name>.duplicates.txt) as 
                   output sequence name, unless given as arg.
 
@@ -105,10 +104,12 @@ Two scripts for calculating consensus or compromise (DNA) sequences from either 
 
           AUTHOR: Johan Nylander
 
-         COMPANY: NBIS/NRM
+         COMPANY: NRM
 
          VERSION: 1.0
 
          CREATED: 03/12/2019 11:02:49 AM
 
         REVISION: ---
+
+         LICENSE: MIT
